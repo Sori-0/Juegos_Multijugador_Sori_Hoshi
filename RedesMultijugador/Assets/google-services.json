@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "705724252396",
+    "firebase_url": "https://coco-multiplayer-default-rtdb.firebaseio.com",
+    "project_id": "coco-multiplayer",
+    "storage_bucket": "coco-multiplayer.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705724252396:android:0840eee1b38697a885e5c9",
+        "android_client_info": {
+          "package_name": "com.coco.multiplayer.sori"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCT230i12LvhEyl-JnMYOEOm5UmaejmS7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
