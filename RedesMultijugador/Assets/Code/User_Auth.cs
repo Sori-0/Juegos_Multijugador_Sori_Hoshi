@@ -5,34 +5,27 @@ using Firebase;
 using TMPro;
 using System.Collections;
 
-public class User_Auth : MonoBehaviour
-{
+public class User_Auth : MonoBehaviour {
     [Header("Sign Up")]
     public TMP_InputField SignUpEmail;
     public TMP_InputField SignUpPasword;
     public TMP_InputField SignUpEmailConfirmation;
 
-    public void SignUp()
-    {
+    public void SignUp() {
         FirebaseAuth auth = FirebaseAuth.DefaultInstance;
         string email = SignUpEmail.text;
         string pasword = SignUpPasword.text;
 
-        auth.CreateUserWithEmailAndPasswordAsync(email, pasword).ContinueWithOnMainThread(task =>
-        {
+        auth.CreateUserWithEmailAndPasswordAsync(email, pasword).ContinueWithOnMainThread(task => {
             if (task.IsCanceled) return;
             if (task.IsFaulted) return;
-            
+
             AuthResult result = task.Result;
-            Debug.LogFormat("Firebase user created succesfully: {0} ({1})",result.User.DisplayName,result.User.UserId);
+            Debug.LogFormat("Firebase user created succesfully: {0} ({1})", result.User.DisplayName, result.User.UserId);
 
-            if (result.User.IsEmailVerified)
-            {
+            if (result.User.IsEmailVerified) {
                 Debug.Log("Sign up succesful");
-            }
-
-            else
-            {
+            } else {
                 Debug.Log("Needs verification");
                 SendEmailVerification();
             }
@@ -41,27 +34,22 @@ public class User_Auth : MonoBehaviour
 
     }
 
-    public void SendEmailVerification()
-    {
+    public void SendEmailVerification() {
         StartCoroutine(SendEmailForVerificationAsync());
     }
 
-    IEnumerator SendEmailForVerificationAsync()
-    {
+    IEnumerator SendEmailForVerificationAsync() {
         FirebaseUser user = FirebaseAuth.DefaultInstance.CurrentUser;
-        if (user != null)
-        {
+        if (user != null) {
             var sendEmailTask = user.SendEmailVerificationAsync();
             yield return new WaitUntil(() => sendEmailTask.IsCompleted);
 
-            if (sendEmailTask.Exception != null)
-            {
+            if (sendEmailTask.Exception != null) {
                 print("Email send error");
                 FirebaseException firebaseException = sendEmailTask.Exception.GetBaseException() as FirebaseException;
                 AuthError error = (AuthError)firebaseException.ErrorCode;
 
-                switch (error)
-                {
+                switch (error) {
                     case AuthError.None:
                         break;
                     case AuthError.Unimplemented:
@@ -225,9 +213,7 @@ public class User_Auth : MonoBehaviour
                     default:
                         break;
                 }
-            }
-            else
-            {
+            } else {
                 print("Email successfully send");
             }
         }
