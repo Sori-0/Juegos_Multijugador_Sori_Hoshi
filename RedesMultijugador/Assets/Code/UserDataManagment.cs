@@ -9,7 +9,7 @@ using Firebase.Extensions;
 
 [Serializable]
 public class UserData {
-    public string userData;
+    public string userData; 
     public float KD;
 }
 
@@ -29,7 +29,7 @@ public class UserDataManagment : MonoBehaviour {
 
         auth = FirebaseAuth.DefaultInstance;
 
-        userID = auth.CurrentUser.UserId;
+        userID = auth?.CurrentUser.UserId;
         dbReference = FirebaseDatabase.DefaultInstance.RootReference;
 
         Debug.LogWarning("Firebase is redy. CurrentID: " + userID);
@@ -61,6 +61,10 @@ public class UserDataManagment : MonoBehaviour {
         }
 
         return true;
+    }
+
+    public string UserID {
+        get { return userID; }
     }
 
 }

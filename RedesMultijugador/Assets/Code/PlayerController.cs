@@ -6,7 +6,7 @@ public class PlayerController : NetworkBehaviour {
     public float speed = 5f;
     [SerializeField] NetworkTransform m_networkTransform;
 
-    void Start () {
+    void Start() {
         m_networkTransform = GetComponent<NetworkTransform>();
         if (m_networkTransform == IsHost) {
             gameObject.GetComponentInChildren<Renderer>().material.color = Color.red;
