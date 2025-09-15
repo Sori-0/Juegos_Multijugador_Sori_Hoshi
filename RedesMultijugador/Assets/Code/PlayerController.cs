@@ -8,7 +8,7 @@ public class PlayerController : NetworkBehaviour {
 
     void Start () {
         m_networkTransform = GetComponent<NetworkTransform>();
-        if (m_networkTransform == IsOwner) {
+        if (m_networkTransform == IsHost) {
             gameObject.GetComponentInChildren<Renderer>().material.color = Color.red;
         } else {
             gameObject.GetComponentInChildren<Renderer>().material.color = Color.blue;
