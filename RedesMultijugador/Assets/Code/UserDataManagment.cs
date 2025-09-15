@@ -8,25 +8,21 @@ using Firebase.Auth;
 using Firebase.Extensions;
 
 [Serializable]
-public class UserData
-{
+public class UserData {
     public string userData;
     public float KD;
 }
 
-public class UserDataManagment : MonoBehaviour
-{
+public class UserDataManagment : MonoBehaviour {
     public UserData userData;
     DatabaseReference dbReference;
-    FirebaseAuth auth;
-    string userID;
+    [SerializeField] FirebaseAuth auth;
+    [SerializeField] string userID;
 
-    private async void Awake()
-    {
+    private async void Awake() {
         var dependencies = await FirebaseApp.CheckAndFixDependenciesAsync();
 
-        if(dependencies != DependencyStatus.Available)
-        {
+        if (dependencies != DependencyStatus.Available) {
             Debug.LogError("Not aviable" + dependencies);
             return;
         }
@@ -40,33 +36,28 @@ public class UserDataManagment : MonoBehaviour
 
     }
 
-    public void SaveData()
-    {
+    public void SaveData() {
         if (!IsRedy()) return;
 
         string json = JsonUtility.ToJson(userData);
-        dbReference.Child("users").Child(userID).SetRawJsonValueAsync(json).ContinueWithOnMainThread(task =>
-        {
+        dbReference.Child("users").Child(userID).SetRawJsonValueAsync(json).ContinueWithOnMainThread(task => {
             if (task.IsCanceled) { Debug.Log("Save canceled"); return; }
             if (task.IsFaulted) { Debug.Log("Save failed" + task.Exception); return; }
             Debug.Log("Save succesgfull for UID: " + userID);
         });
     }
 
-    private bool IsRedy()
-    {
-        if(auth == null || dbReference == null)
-        {
+    private bool IsRedy() {
+        if (auth == null || dbReference == null) {
             Debug.LogError("Firebase is not yet initialized");
             return false;
         }
-        if(auth.CurrentUser == null)
-        {
+        if (auth.CurrentUser == null) {
             Debug.LogError("No user detected");
             return false;
         }
-        if (string.IsNullOrEmpty(userID)){
-            userID = auth.CurrentUser.UserId;   
+        if (string.IsNullOrEmpty(userID)) {
+            userID = auth.CurrentUser.UserId;
         }
 
         return true;
