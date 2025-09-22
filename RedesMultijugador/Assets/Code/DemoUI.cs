@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class DemoUI : MonoBehaviour {
-    [SerializeField] UserDataManagment m_usrDtaMngmnt;
+    //[SerializeField] UserDataManagment m_usrDtaMngmnt;
     MultiplayerBootstrap mp;
     string code = "";
 
@@ -12,7 +12,7 @@ public class DemoUI : MonoBehaviour {
         GUILayout.Label("Multiplayer Demo");
         if (GUILayout.Button("Host (create lobby)")) mp.Host();
         if (GUILayout.Button("Quick Join")) mp.QuickJoin();
-        GUILayout.Label(m_usrDtaMngmnt.userData.userData);
+        //GUILayout.Label(m_usrDtaMngmnt.userData.userData);
 
         GUILayout.Space(6);
         GUILayout.Label("Join with code");
