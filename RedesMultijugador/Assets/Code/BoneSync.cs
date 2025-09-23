@@ -28,19 +28,4 @@ public class BoneSync : NetworkBehaviour
         bone.transform.rotation = rot;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

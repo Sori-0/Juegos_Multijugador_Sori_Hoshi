@@ -3029,6 +3029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Soldier@Offensive Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 5068930529639403014, guid: 6ac26f6b6effe6f4b8494c28622a2440, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5316759077915259191, guid: 6ac26f6b6effe6f4b8494c28622a2440, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 3682059753
