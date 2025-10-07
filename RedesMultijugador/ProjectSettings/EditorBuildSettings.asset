@@ -11,9 +11,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Multijugador.unity
     guid: 0cc614bd009bf6148ab29b3eecb00439
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test.unity
     guid: b0f0012cec89f1546a44e6ff29075754
+  - enabled: 1
+    path: Assets/Scenes/VR.unity
+    guid: f00d0e78927c42e4aae374c9a2a13915
+  - enabled: 1
+    path: Assets/Scenes/VR-Test.unity
+    guid: fac221fb0551e00468eb345e16129b8b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: f4b7aeef7a1b5b745b5010077e611c67, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 1a25baf3267c56e42b8fd1589a3db170, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 185020e76eb6d944a82c82837b6e7d79, type: 2}
   m_UseUCBPForAssetBundles: 0
