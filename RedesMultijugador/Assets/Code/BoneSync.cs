@@ -3,29 +3,44 @@ using Unity.Netcode;
 
 public class BoneSync : NetworkBehaviour
 {
-    public Transform bone;
+    public Transform[] bones;
+    public Transform[] targets;
+
+    public TransformData[] transformDataArray;
+
+
+    private void Start()
+    {
+        transformDataArray = new TransformData[bones.Length];
+    }
 
     private void Update()
     {
-        if(!IsOwner) return;
+        if (!IsOwner) return;
 
-        SendBoneTranform_ServerRPC(bone.transform.position, bone.transform.rotation);
-
+        for (int i = 0; i < bones.Length; i++)
+        {
+            transformDataArray[i].Position = bones[i].position;
+            transformDataArray[i].Rotation = bones[i].rotation;
+        }
     }
 
+    
+
     [ServerRpc]
-    void SendBoneTranform_ServerRPC(Vector3 pos, Quaternion rot)
+    void SendBoneArray_ServerRPC(TransformData[] data)
     {
-        ApplyToAll_ClientRPC(pos, rot);
+        ApplayTranformArrayToAll_ClientRPC(data);
     }
 
     [ClientRpc]
-    void ApplyToAll_ClientRPC(Vector3 pos, Quaternion rot)
+    void ApplayTranformArrayToAll_ClientRPC(TransformData[] data)
     {
-        if (IsOwner) return;
-
-        bone.transform.position = pos;
-        bone.transform.rotation = rot;
+        for (int i = 0; i < data.Length; i++)
+        {
+            targets[i].position = data[i].Position;
+            targets[i].rotation = data[i].Rotation;
+        }
     }
 
 }
