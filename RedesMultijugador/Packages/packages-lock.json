@@ -74,7 +74,7 @@
     },
     "com.meta.xr.sdk.platform": {
       "version": "78.0.0",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.ugui": "1.0.0"
