@@ -1,7 +1,7 @@
 using UnityEngine;
 using Unity.Netcode;
 
-public class TransformData : INetworkSerializable
+public struct TransformData : INetworkSerializable
 {
     public Vector3 Position;
     public Quaternion Rotation;
