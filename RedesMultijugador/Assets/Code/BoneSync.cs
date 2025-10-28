@@ -23,6 +23,7 @@ public class BoneSync : NetworkBehaviour
             transformDataArray[i].Position = bones[i].position;
             transformDataArray[i].Rotation = bones[i].rotation;
         }
+        SendBoneArray_ServerRPC(transformDataArray);
     }
 
     
