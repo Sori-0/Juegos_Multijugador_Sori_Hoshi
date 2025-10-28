@@ -1361,6 +1361,7 @@ GameObject:
   - component: {fileID: 6532042646036353094}
   - component: {fileID: 8946081985011784093}
   - component: {fileID: 8912052644665788075}
+  - component: {fileID: 507432924277064389}
   m_Layer: 0
   m_Name: NET_MasterPlayerAvatar
   m_TagString: Untagged
@@ -1399,7 +1400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1257109890
+  GlobalObjectIdHash: 2110785482
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -1426,7 +1427,7 @@ MonoBehaviour:
   ClientTitan: {fileID: 3604882611190900828}
   HostLegion: {fileID: 8373731611451025601}
   ClientLegion: {fileID: 2013419380483741487}
-  xrHead: {fileID: 1399310300586153655}
+  xrHead: {fileID: 561533175617910982}
   xrLeftHand: {fileID: 3912307260549533867}
   xrRightHand: {fileID: 5411660450101549934}
 --- !u!114 &8912052644665788075
@@ -1451,6 +1452,20 @@ MonoBehaviour:
   - {fileID: 1974619125697658044}
   - {fileID: 7446156952014575412}
   - {fileID: 5784655877062388926}
+--- !u!114 &507432924277064389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2545346681774809127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f734800b3fe62448f554a1a9642bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_health: 100
+  m_textMeshPro: {fileID: 2352312232518079512, guid: 64f61eb6880677d48889af0265cb0c12, type: 3}
 --- !u!1 &2582074373384313363
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,7 +2854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd1d588415b04047aeb4516107cc6b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XRhead: {fileID: 1775040505396228614}
+  XRhead: {fileID: 561533175617910982}
   XRleftHand: {fileID: 3912307260549533867}
   XRRightHand: {fileID: 5411660450101549934}
   titanHead: {fileID: 4363160389421486090}
