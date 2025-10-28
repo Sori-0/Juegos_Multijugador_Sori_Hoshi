@@ -1426,7 +1426,7 @@ MonoBehaviour:
   ClientTitan: {fileID: 3604882611190900828}
   HostLegion: {fileID: 8373731611451025601}
   ClientLegion: {fileID: 2013419380483741487}
-  xrHead: {fileID: 561533175617910982}
+  xrHead: {fileID: 1399310300586153655}
   xrLeftHand: {fileID: 3912307260549533867}
   xrRightHand: {fileID: 5411660450101549934}
 --- !u!114 &8912052644665788075
@@ -2839,9 +2839,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd1d588415b04047aeb4516107cc6b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XRhead: {fileID: 561533175617910982}
-  XRleftHand: {fileID: 5892102252159327580}
-  XRRightHand: {fileID: 650109332195881558}
+  XRhead: {fileID: 1775040505396228614}
+  XRleftHand: {fileID: 3912307260549533867}
+  XRRightHand: {fileID: 5411660450101549934}
   titanHead: {fileID: 4363160389421486090}
   titanLeftHand: {fileID: 5399155981395981711}
   titanRightHand: {fileID: 3938580203559358564}
