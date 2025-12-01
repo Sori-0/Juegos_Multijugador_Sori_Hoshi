@@ -12,11 +12,11 @@ public class HealthBar : MonoBehaviour {
 
     [ServerRpc]
     void SendDamage_ServerRPC(float health, TextMeshProUGUI text, bool damagesetter) {
-
+        
     }
 
     [ClientRpc]
-    void ApplyDamage_ServerRPC(float health, TextMeshProUGUI text, bool damagesetter) {
+    void ApplyDamage_ClientRPC(float health, TextMeshProUGUI text, bool damagesetter) {
         if (damagesetter) {
             health--;
         } else if (!damagesetter) {
