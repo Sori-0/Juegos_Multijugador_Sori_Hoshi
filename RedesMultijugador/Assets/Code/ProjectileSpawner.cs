@@ -1,7 +1,7 @@
 using Unity.Netcode;
 using UnityEngine;
 
-public class ProjectileSpawner : NetworkBehaviour
+public class ProjectileSpawner1 : NetworkBehaviour
 {
     [SerializeField] NetworkObject projectilePrefab;
     [SerializeField] Transform spawnPoint;
@@ -24,8 +24,8 @@ public class ProjectileSpawner : NetworkBehaviour
     void SpawnProjectileServerRpc(Vector3 pos, Quaternion rot, Vector3 dir, ServerRpcParams _ = default)
     {
         var proj = Instantiate(projectilePrefab, pos, rot);
-
-        var simple = proj.GetComponent<BulletsManager>();
+        Debug.Log("IsSpawn");
+        var simple = proj.GetComponent<BulletsManager1>();
         if (simple != null) simple.Initialize(dir);
         proj.Spawn();
     }

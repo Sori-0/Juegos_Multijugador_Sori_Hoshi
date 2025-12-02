@@ -2,7 +2,7 @@ using TMPro;
 using Unity.Netcode;
 using UnityEngine;
 
-public class HealthBar : MonoBehaviour {
+public class HealthBar1 : MonoBehaviour {
     [SerializeField, Range(0f, 100f)] NetworkVariable<float> m_health;
     [SerializeField] TextMeshProUGUI m_textMeshPro;
 
