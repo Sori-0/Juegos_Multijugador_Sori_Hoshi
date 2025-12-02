@@ -5,9 +5,10 @@ public class BulletsManager : NetworkBehaviour
 {
     [SerializeField] float speed = 5f;
     [SerializeField] float lifeTime = 10f;
-    
     Vector3 dir = Vector3.forward;
     float elapsedTime;
+    //[SerializeField] Health _health;
+    //[SerializeField] HealthBar _healthBar;
 
     public void Initialize(Vector3 direction)
     {
@@ -19,7 +20,6 @@ public class BulletsManager : NetworkBehaviour
         if (!IsServer) return;
 
         transform.position += dir * speed * Time.deltaTime;
-
         elapsedTime = Time.deltaTime;
 
         if(elapsedTime >= lifeTime)
@@ -32,13 +32,18 @@ public class BulletsManager : NetworkBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(!IsServer) return;
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if(!IsServer) return;
+    //    if (other.CompareTag("Legion"))
+    //    {
 
-        if(NetworkObject != null && NetworkObject.IsSpawned)
-        {
-            NetworkObject.Despawn();
-        }
-    }
+    //    }
+    //    else if (other.CompareTag("Titan"))
+    //    {
+    //        Debug.Log("Choque");
+    //        other.GetComponent<HealthBar>();
+    //        _healthBar.SendDamage_ServerRPC(_health.health, 0.5f);
+    //    }
+    //}
 }

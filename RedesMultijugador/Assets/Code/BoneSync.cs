@@ -6,12 +6,12 @@ public class BoneSync : NetworkBehaviour
     public Transform[] bones;
     public Transform[] targets;
 
-    public TransformData[] transformDataArray;
+    public TransformData1[] transformDataArray;
 
 
     private void Start()
     {
-        transformDataArray = new TransformData[bones.Length];
+        transformDataArray = new TransformData1[bones.Length];
     }
 
     private void Update()
@@ -29,13 +29,13 @@ public class BoneSync : NetworkBehaviour
     
 
     [ServerRpc]
-    void SendBoneArray_ServerRPC(TransformData[] data)
+    void SendBoneArray_ServerRPC(TransformData1[] data)
     {
         ApplayTranformArrayToAll_ClientRPC(data);
     }
 
     [ClientRpc]
-    void ApplayTranformArrayToAll_ClientRPC(TransformData[] data)
+    void ApplayTranformArrayToAll_ClientRPC(TransformData1[] data)
     {
         for (int i = 0; i < data.Length; i++)
         {
