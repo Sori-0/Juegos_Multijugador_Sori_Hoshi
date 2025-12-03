@@ -35,10 +35,6 @@ public class BulletsManager1 : NetworkBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(!IsServer) return;
-
-        //if(NetworkObject != null && NetworkObject.IsSpawned)
-        //{
-        //    NetworkObject.Despawn();
-        //}
+        other.GetComponentInParent<HpTitan>().DamageDone();
     }
 }

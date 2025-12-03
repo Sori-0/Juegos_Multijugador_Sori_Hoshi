@@ -1387,7 +1387,7 @@ GameObject:
   - component: {fileID: 8999784318446079978}
   - component: {fileID: 3655336017993493585}
   - component: {fileID: 82471720295548202}
-  - component: {fileID: 3146284476014363493}
+  - component: {fileID: 89270228065616025}
   m_Layer: 0
   m_Name: NET_MasterPlayerAvatar
   m_TagString: Untagged
@@ -1562,21 +1562,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6c0be61502bb534f922ebb746851216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3146284476014363493
+--- !u!114 &89270228065616025
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2545346681774809127}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02f734800b3fe62448f554a1a9642bc0, type: 3}
+  m_Script: {fileID: 11500000, guid: 1de94c896012f264f9793be3c9bbef62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_health:
-    m_InternalValue: 0
-  m_textMeshPro: {fileID: 0}
+  _hpTitan: {fileID: 0}
 --- !u!1 &2582074373384313363
 GameObject:
   m_ObjectHideFlags: 0

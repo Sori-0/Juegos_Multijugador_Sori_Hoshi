@@ -37,7 +37,7 @@ public class MasterAvatarManager2 : NetworkBehaviour
     {
         if (other.CompareTag("Bala") && isOwnerByServer)
         {
-            healthBar.SendDamage_ServerRPC(_heath.health, 0.5f);
+
         }
         if (other.CompareTag("BalaTitan"))
         {
