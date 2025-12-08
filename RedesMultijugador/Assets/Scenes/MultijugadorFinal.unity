@@ -34096,6 +34096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Socle
       objectReference: {fileID: 0}
+    - target: {fileID: 1238941389015204933, guid: 0e583f0513805e8429f4d75ac3d8479b, type: 3}
+      propertyPath: m_TagString
+      value: Spawner
+      objectReference: {fileID: 0}
     - target: {fileID: 6680078790939503405, guid: 0e583f0513805e8429f4d75ac3d8479b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.26

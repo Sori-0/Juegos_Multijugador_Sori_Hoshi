@@ -1783,7 +1783,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3609678014493049523}
-  - component: {fileID: 2554661312060569053}
   m_Layer: 0
   m_Name: Castle Guard 02@Idle
   m_TagString: Legion
@@ -1808,29 +1807,6 @@ Transform:
   - {fileID: 9099652565140447783}
   m_Father: {fileID: 1684408307631720906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2554661312060569053
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4130917600896292873}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2.0530243
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.016912, z: 0}
 --- !u!1 &4222017889478441810
 GameObject:
   m_ObjectHideFlags: 0
@@ -3135,6 +3111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1684408307631720906}
+  - component: {fileID: 3157865482797343253}
   m_Layer: 0
   m_Name: HostLegion
   m_TagString: Legion
@@ -3158,6 +3135,29 @@ Transform:
   - {fileID: 3609678014493049523}
   m_Father: {fileID: 5305923913389858007}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &3157865482797343253
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8373731611451025601}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8413165427541202012
 GameObject:
   m_ObjectHideFlags: 0
