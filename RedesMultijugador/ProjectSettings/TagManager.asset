@@ -10,6 +10,7 @@ TagManager:
   - Titan
   - CinemachineTarget
   - SliderHealth
+  - Spawner
   layers:
   - Default
   - TransparentFX

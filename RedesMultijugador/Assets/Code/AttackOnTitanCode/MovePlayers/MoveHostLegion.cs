@@ -6,12 +6,14 @@ public class MoveHostLegion : NetworkBehaviour
 {
     public Transform[] hostLegion;
     public Transform[] clientLegion;
+    [SerializeField] Transform spawner;
 
     TransformData1[] transformData;
 
     private void Start()
     {
         transformData = new TransformData1[hostLegion.Length];
+        spawner = GameObject.FindGameObjectWithTag("Spawner").transform;
     }
 
     private void Update()
@@ -24,6 +26,7 @@ public class MoveHostLegion : NetworkBehaviour
         
     }
 
+    public void TPLegion() => transform.position = spawner.position;
 
     [ServerRpc]
     void SendTransformClientLegion_ServerRPC(TransformData1[] data)

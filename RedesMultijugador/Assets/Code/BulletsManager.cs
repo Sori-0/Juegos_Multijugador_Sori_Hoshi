@@ -1,44 +1,44 @@
 using Unity.Netcode;
 using UnityEngine;
 
-public class BulletsManager : NetworkBehaviour
-{
+public class BulletsManager : NetworkBehaviour {
     [SerializeField] float speed = 5f;
     [SerializeField] float lifeTime = 10f;
 
     Vector3 dir = Vector3.back;
     float elapsedTime;
 
-    public void Initialize(Vector3 direction)
-    {
+    public void Initialize(Vector3 direction) {
         dir = direction;
     }
 
-    private void Update()
-    {
+    private void Update() {
         if (!IsServer) return;
 
         transform.position += dir * speed * Time.deltaTime;
 
         elapsedTime = Time.deltaTime;
 
-        if (elapsedTime >= lifeTime)
-        {
-            if (NetworkObject != null && NetworkObject.IsSpawned)
-            {
+        if (elapsedTime >= lifeTime) {
+            if (NetworkObject != null && NetworkObject.IsSpawned) {
                 NetworkObject.Despawn();
             }
         }
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
+    private void OnTriggerEnter(Collider other) {
         if (!IsServer) return;
-        if (other.CompareTag("Titan"))
-        {
-            other.GetComponentInParent<HpTitan>().DamageDone();
-            NetworkObject.Despawn();
+        if (gameObject.CompareTag("Bala")) {
+            if (other.CompareTag("Titan")) {
+                other.GetComponentInParent<HpTitan>().DamageDone();
+                NetworkObject.Despawn();
+            }
+        } else if(gameObject.CompareTag("BalaTitan")) {
+            if (other.CompareTag("Legion")) {
+                other.GetComponent<MoveHostLegion>().TPLegion();
+                NetworkObject.Despawn();
+            }
         }
     }
 }
