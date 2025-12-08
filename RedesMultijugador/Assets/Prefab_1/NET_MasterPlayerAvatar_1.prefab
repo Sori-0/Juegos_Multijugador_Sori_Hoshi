@@ -1301,6 +1301,7 @@ MonoBehaviour:
   - {fileID: 2307877901161463595}
   clientLegion:
   - {fileID: 3609678014493049523}
+  spawner: {fileID: 0}
 --- !u!114 &3080033276892817779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1785,7 +1786,7 @@ GameObject:
   - component: {fileID: 2554661312060569053}
   m_Layer: 0
   m_Name: Castle Guard 02@Idle
-  m_TagString: Untagged
+  m_TagString: Legion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3136,7 +3137,7 @@ GameObject:
   - component: {fileID: 1684408307631720906}
   m_Layer: 0
   m_Name: HostLegion
-  m_TagString: Untagged
+  m_TagString: Legion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
