@@ -1449,8 +1449,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438a3b6d32f9d2e45b3b461cd49146e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 6866157814535020024, guid: 736b312195d42b945a5a4316062ba083, type: 3}
-  spawnPoint: {fileID: 8834482266021195191}
+  titanPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  titanSpawnPoint: {fileID: 0}
+  legionSpawnPoint: {fileID: 0}
 --- !u!114 &8946081985011784093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1467,9 +1469,6 @@ MonoBehaviour:
   ClientTitan: {fileID: 3604882611190900828}
   HostLegion: {fileID: 8373731611451025601}
   ClientLegion: {fileID: 2013419380483741487}
-  xrHead: {fileID: 561533175617910982}
-  xrLeftHand: {fileID: 3912307260549533867}
-  xrRightHand: {fileID: 5411660450101549934}
 --- !u!114 &8912052644665788075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,6 +1574,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hpTitan: {fileID: 0}
+  titanHealth:
+    m_InternalValue: 1
 --- !u!1 &2582074373384313363
 GameObject:
   m_ObjectHideFlags: 0
@@ -4940,7 +4941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8834482266021195191
 Transform:
   m_ObjectHideFlags: 0
