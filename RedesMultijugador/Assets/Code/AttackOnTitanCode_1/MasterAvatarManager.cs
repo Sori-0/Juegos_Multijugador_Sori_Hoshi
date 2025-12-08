@@ -6,9 +6,7 @@ public class MasterAvatarManager : NetworkBehaviour
     public GameObject HostTitan, ClientTitan;
     public GameObject HostLegion, ClientLegion;
 
-    public Transform xrHead, xrLeftHand, xrRightHand;
-
-
+    
     private void Start()
     {
         networkObject = GetComponent<NetworkObject>();
@@ -17,13 +15,19 @@ public class MasterAvatarManager : NetworkBehaviour
             bool isOwner = networkObject.IsOwner;
             if(networkObject.OwnerClientId == 0)
             {
-                if (isOwner) HostTitan.SetActive(true);
-                else ClientTitan.SetActive(false);
+                if (isOwner)
+                {
+                    HostTitan.SetActive(true);
+                }
+                else ClientTitan.SetActive(true);
             }
             else
             {
-                if (isOwner) ClientLegion.SetActive(true);
-                else HostLegion.SetActive(false);
+                if (isOwner)
+                {
+                    ClientLegion.SetActive(true);
+                }
+                else HostLegion.SetActive(true);
             }
         }
     }

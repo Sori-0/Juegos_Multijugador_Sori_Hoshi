@@ -26,8 +26,6 @@ public class BoneSync : NetworkBehaviour
         SendBoneArray_ServerRPC(transformDataArray);
     }
 
-    
-
     [ServerRpc]
     void SendBoneArray_ServerRPC(TransformData1[] data)
     {

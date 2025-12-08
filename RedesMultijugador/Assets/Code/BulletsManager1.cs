@@ -35,6 +35,9 @@ public class BulletsManager1 : NetworkBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(!IsServer) return;
-        other.GetComponentInParent<HpTitan>().DamageDone();
+        if (other.CompareTag("Titan"))
+        {
+            other.GetComponentInParent<HpTitan>().DamageDone();
+        }
     }
 }

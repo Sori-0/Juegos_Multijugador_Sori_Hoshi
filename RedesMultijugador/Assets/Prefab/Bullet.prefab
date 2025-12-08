@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2993190935869479016}
   - component: {fileID: 3793687921816095934}
-  - component: {fileID: 4883692731131535004}
+  - component: {fileID: 6096177691757313294}
   - component: {fileID: 122160098571697602}
   - component: {fileID: 532041854527308195}
   - component: {fileID: 9114597407929714093}
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 4123961427
+  GlobalObjectIdHash: 3566864997
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -61,7 +61,7 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
---- !u!114 &4883692731131535004
+--- !u!114 &6096177691757313294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,11 +70,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 546462121402217606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faf93b0689fdf574db5eb14e24281174, type: 3}
+  m_Script: {fileID: 11500000, guid: 4777f5de4c3bf5f49a94b2d2342abfc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  lifeTime: 10
+  lifeTime: 5
 --- !u!33 &122160098571697602
 MeshFilter:
   m_ObjectHideFlags: 0
